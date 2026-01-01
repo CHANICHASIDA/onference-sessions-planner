@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { Session } from "@/types/session";
+import { checkOverlaps } from "@/utils/checkOverlaps";
 
 interface AgendaContextType {
   agenda: Session[];
@@ -16,28 +17,6 @@ const AgendaContext = createContext<AgendaContextType | null>(null);
 export function AgendaProvider({ children }: { children: React.ReactNode }) {
   const [agenda, setAgenda] = useState<Session[]>([]);
   const [overlappingIds, setOverlappingIds] = useState<string[]>([]);
-
-  function checkOverlaps(sessions: Session[]): string[] {
-    const overlaps: string[] = [];
-
-    for (let i = 0; i < sessions.length; i++) {
-      const a = sessions[i];
-      const startA = new Date(a.startDateTime).getTime();
-      const endA = new Date(a.endDateTime).getTime();
-
-      for (let j = i + 1; j < sessions.length; j++) {
-        const b = sessions[j];
-        const startB = new Date(b.startDateTime).getTime();
-        const endB = new Date(b.endDateTime).getTime();
-
-        if (startA < endB && endA > startB) {
-          overlaps.push(a.id, b.id);
-        }
-      }
-    }
-
-    return [...new Set(overlaps)];
-  }
 
   // Load from localStorage
   useEffect(() => {
