@@ -2,10 +2,26 @@
 import { useState } from "react";
 import SessionsList from "./SessionsList";
 import { Session } from "@/types/session";
+import { Track } from "@/types/track";
+import FilterSelect from "./FilterSelect";
 
 interface Props {
   sessions: Session[];
 }
+const trackOptions = [
+  { value: "", label: "All Tracks" },
+  { value: Track.FRONTEND, label: "Frontend" },
+  { value: Track.BACKEND, label: "Backend" },
+  { value: Track.DEVOPS, label: "DevOps" },
+  { value: Track.AI, label: "AI" },
+];
+
+const timeOptions = [
+  { value: "", label: "All Times" },
+  { value: "Morning", label: "Morning" },
+  { value: "Afternoon", label: "Afternoon" },
+  { value: "Evening", label: "Evening" },
+];
 
 export default function SessionsPage({ sessions }: Props) {
   const [filterTrack, setFilterTrack] = useState("");
@@ -41,27 +57,19 @@ export default function SessionsPage({ sessions }: Props) {
           onChange={(e) => setSearch(e.target.value)}
           className="border p-2 rounded flex-1"
         />
-        <select
+        <FilterSelect
+          label="Track"
           value={filterTrack}
-          onChange={(e) => setFilterTrack(e.target.value)}
-          className="border p-2 rounded"
-        >
-          <option value="">All Tracks</option>
-          <option value="Frontend">Frontend</option>
-          <option value="Backend">Backend</option>
-          <option value="DevOps">DevOps</option>
-          <option value="AI">AI</option>
-        </select>
-        <select
+          options={trackOptions}
+          onChange={setFilterTrack}
+        />
+
+        <FilterSelect
+          label="Time of Day"
           value={filterTime}
-          onChange={(e) => setFilterTime(e.target.value)}
-          className="border p-2 rounded"
-        >
-          <option value="">All Times</option>
-          <option value="Morning">Morning</option>
-          <option value="Afternoon">Afternoon</option>
-          <option value="Evening">Evening</option>
-        </select>
+          options={timeOptions}
+          onChange={setFilterTime}
+        />
       </div>
       {filteredSessions.length === 0 && (
         <p className="text-center col-span-full">No sessions found.</p>
