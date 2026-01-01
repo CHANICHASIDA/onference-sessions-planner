@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to React 18",
+    "speaker": "Alice Cohen",
+    "track": "Frontend",
+    "startDateTime": "2026-01-02T09:00",
+    "endDateTime": "2026-01-02T10:00",
+    "room": "Room A",
+    "description": "Learn the basics of React 18 and new features."
+  },
+  {
+    "id": "2",
+    "title": "Advanced Node.js",
+    "speaker": "Bob Levi",
+    "track": "Backend",
+    "startDateTime": "2026-01-02T10:30",
+    "endDateTime": "2026-01-02T11:30",
+    "room": "Room B",
+    "description": "Deep dive into Node.js performance and best practices."
+  }
+]
