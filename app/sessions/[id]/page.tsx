@@ -1,5 +1,6 @@
 import { getAllSessions, getSessionById } from "@/lib/sessions";
 import { Session } from "@/types/session";
+import AddToAgenda from "./AddToAgenda";
 
 export async function generateStaticParams() {
   const sessions = await getAllSessions();
@@ -34,9 +35,7 @@ export default async function SessionPage({ params }: PageProps) {
       </p>
       <p className="mt-4">{session.description}</p>
 
-      <button className="mt-6 px-4 py-2 bg-blue-600 text-white rounded">
-        Add to My Agenda
-      </button>
+      <AddToAgenda session={session} />
     </div>
   );
 }
