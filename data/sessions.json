@@ -1,22 +1,152 @@
 [
   {
     "id": "1",
-    "title": "Introduction to React 18",
-    "speaker": "Alice Cohen",
-    "track": "Frontend",
-    "startDateTime": "2026-01-02T09:00",
-    "endDateTime": "2026-01-02T10:00",
+    "title": "React 18 Deep Dive",
+    "speaker": "Alice Johnson",
+    "track": "frontend",
+    "startDateTime": "2026-01-01T09:00",
+    "endDateTime": "2026-01-01T10:00",
     "room": "Room A",
-    "description": "Learn the basics of React 18 and new features."
+    "description": "Learn all about React 18 features and best practices."
   },
   {
     "id": "2",
-    "title": "Advanced Node.js",
-    "speaker": "Bob Levi",
-    "track": "Backend",
-    "startDateTime": "2026-01-02T08:30",
-    "endDateTime": "2026-01-02T11:30",
+    "title": "Next.js App Router",
+    "speaker": "Bob Smith",
+    "track": "frontend",
+    "startDateTime": "2026-01-01T09:30",
+    "endDateTime": "2026-01-01T10:30",
     "room": "Room B",
-    "description": "Deep dive into Node.js performance and best practices."
+    "description": "Master the new Next.js App Router in this hands-on session."
+  },
+  {
+    "id": "3",
+    "title": "Node.js Performance Tuning",
+    "speaker": "Carol Davis",
+    "track": "backend",
+    "startDateTime": "2026-01-01T10:30",
+    "endDateTime": "2026-01-01T11:30",
+    "room": "Room C",
+    "description": "Tips and tricks to optimize your Node.js applications."
+  },
+  {
+    "id": "4",
+    "title": "Microservices with NestJS",
+    "speaker": "David Lee",
+    "track": "backend",
+    "startDateTime": "2026-01-01T11:00",
+    "endDateTime": "2026-01-01T12:00",
+    "room": "Room D",
+    "description": "Building scalable microservices using NestJS framework."
+  },
+  {
+    "id": "5",
+    "title": "Kubernetes Essentials",
+    "speaker": "Eve Kim",
+    "track": "devops",
+    "startDateTime": "2026-01-01T13:00",
+    "endDateTime": "2026-01-01T14:00",
+    "room": "Room E",
+    "description": "Introduction to Kubernetes concepts and deployment."
+  },
+  {
+    "id": "6",
+    "title": "CI/CD Pipelines",
+    "speaker": "Frank White",
+    "track": "devops",
+    "startDateTime": "2026-01-01T14:00",
+    "endDateTime": "2026-01-01T15:00",
+    "room": "Room F",
+    "description": "Automating builds, tests, and deployments in CI/CD pipelines."
+  },
+  {
+    "id": "7",
+    "title": "AI in Web Apps",
+    "speaker": "Grace Chen",
+    "track": "AI",
+    "startDateTime": "2026-01-01T15:00",
+    "endDateTime": "2026-01-01T16:00",
+    "room": "Room G",
+    "description": "Integrating AI features into your web applications."
+  },
+  {
+    "id": "8",
+    "title": "Machine Learning Basics",
+    "speaker": "Henry Adams",
+    "track": "AI",
+    "startDateTime": "2026-01-01T16:00",
+    "endDateTime": "2026-01-01T17:00",
+    "room": "Room H",
+    "description": "An introduction to machine learning concepts for developers."
+  },
+  {
+    "id": "9",
+    "title": "State Management in React",
+    "speaker": "Ivy Wilson",
+    "track": "frontend",
+    "startDateTime": "2026-01-02T09:00",
+    "endDateTime": "2026-01-02T10:00",
+    "room": "Room A",
+    "description": "Explore Context, Redux, Zustand, and other state management solutions."
+  },
+  {
+    "id": "10",
+    "title": "TypeScript Advanced Patterns",
+    "speaker": "Jack Black",
+    "track": "frontend",
+    "startDateTime": "2026-01-02T10:00",
+    "endDateTime": "2026-01-02T11:00",
+    "room": "Room B",
+    "description": "Deep dive into TypeScript types, generics, and advanced patterns."
+  },
+  {
+    "id": "11",
+    "title": "PostgreSQL Performance",
+    "speaker": "Karen Young",
+    "track": "backend",
+    "startDateTime": "2026-01-02T11:00",
+    "endDateTime": "2026-01-02T12:00",
+    "room": "Room C",
+    "description": "Optimize your PostgreSQL queries and database performance."
+  },
+  {
+    "id": "12",
+    "title": "Docker in Practice",
+    "speaker": "Leo Martin",
+    "track": "devops",
+    "startDateTime": "2026-01-02T13:00",
+    "endDateTime": "2026-01-02T14:00",
+    "room": "Room D",
+    "description": "Hands-on session with Docker containers and best practices."
+  },
+  {
+    "id": "13",
+    "title": "Deploying AI Models",
+    "speaker": "Mia Scott",
+    "track": "AI",
+    "startDateTime": "2026-01-02T14:00",
+    "endDateTime": "2026-01-02T15:00",
+    "room": "Room E",
+    "description": "Learn how to deploy AI models into production applications."
+  },
+  {
+    "id": "14",
+    "title": "Frontend Testing",
+    "speaker": "Nick Brown",
+    "track": "frontend",
+    "startDateTime": "2026-01-02T15:00",
+    "endDateTime": "2026-01-02T16:00",
+    "room": "Room F",
+    "description": "Testing React components with Jest and React Testing Library."
+  },
+  {
+    "id": "15",
+    "title": "Backend Security",
+    "speaker": "Olivia Green",
+    "track": "backend",
+    "startDateTime": "2026-01-02T16:00",
+    "endDateTime": "2026-01-02T17:00",
+    "room": "Room G",
+    "description": "Secure your backend APIs and databases against attacks."
   }
 ]

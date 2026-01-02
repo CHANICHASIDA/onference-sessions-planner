@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900 min-h-screen`}
       >
         <AgendaProvider>
           <Header />
-          <main>{children}</main>
+          <main className="max-w-6xl mx-auto px-6 py-8">{children}</main>
         </AgendaProvider>
       </body>
     </html>
