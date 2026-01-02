@@ -18,7 +18,7 @@ export function AgendaProvider({ children }: { children: React.ReactNode }) {
   const [agenda, setAgenda] = useState<Session[]>([]);
   const [overlappingIds, setOverlappingIds] = useState<string[]>([]);
 
-  // Load from localStorage
+  // Load from localStorage the agenda list
   useEffect(() => {
     const stored = localStorage.getItem("agenda");
     if (stored) {
@@ -26,7 +26,7 @@ export function AgendaProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // Persist to localStorage
+  // save the agenda list in localStorage
   useEffect(() => {
     localStorage.setItem("agenda", JSON.stringify(agenda));
   }, [agenda]);

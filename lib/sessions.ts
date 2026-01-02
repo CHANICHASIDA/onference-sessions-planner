@@ -11,6 +11,5 @@ export async function getAllSessions(): Promise<Session[]> {
 
 export async function getSessionById(id: string): Promise<Session | null> {
   const sessions = await getAllSessions();
-  console.log(id, sessions);
   return sessions.find((s) => s.id === id) || null;
 }

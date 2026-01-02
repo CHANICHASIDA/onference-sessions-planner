@@ -29,7 +29,6 @@ export default async function SessionPage({ params }: PageProps) {
 
   return (
     <div className="max-w-3xl mx-auto">
-      {/* כפתור חזרה */}
       <Link
         href="/"
         className="text-slate-500 hover:text-indigo-600 text-sm font-medium mb-6 inline-flex items-center gap-2 transition-colors"

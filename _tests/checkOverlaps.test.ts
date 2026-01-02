@@ -1,5 +1,6 @@
 import { checkOverlaps } from "@/utils/checkOverlaps";
 import { sessionsMock } from "@/mocks/sessionsMock";
+//this test check overlaps function
 
 test("detects overlapping sessions", () => {
   const overlaps = checkOverlaps(sessionsMock);

@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import SessionsPage from "@/components/SessionsPage";
 import { sessionsMock } from "@/mocks/sessionsMock";
 import "@testing-library/jest-dom";
+//this test check the filters and search function in sessios page
 
 describe("SessionsPage", () => {
   it("filters sessions by track", () => {

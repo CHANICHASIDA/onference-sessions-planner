@@ -10,6 +10,7 @@ export default function AddToAgenda({ session }: { session: Session }) {
 
   return (
     <button
+      aria-label="add to agenda"
       onClick={() =>
         inAgenda ? removeFromAgenda(session.id) : addToAgenda(session)
       }
