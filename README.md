@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A small conference sessions planner built with Next.js (App Router) and TypeScript.
+The app allows users to browse conference sessions, filter and search them, view session details, and build a personal agenda with conflict detection.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
+🚀 How to Run the Project
+Option 1: Run locally (recommended for development)
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run tests
+npm test
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Option 2: Run using Docker
 
-## Learn More
+A Docker image is available on Docker Hub:
 
-To learn more about Next.js, take a look at the following resources:
+docker run -p 3000:3000 chanfraind/conference-planner:latest
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then open:
+👉 http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🧱 Architecture & Technical Decisions
+Framework & Stack
 
-## Deploy on Vercel
+Next.js 13+ with App Router
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tailwind CSS for styling
+
+React Context + localStorage for agenda state management
+
+Jest + React Testing Library for tests
+
+Data Loading Strategy
+
+Session data is stored in a static JSON file.
+
+The initial sessions list is rendered on the server using Server Components.
+
+Filtering, searching, and sorting are handled on the client side.
+
+Reasoning:
+The dataset is small and fully loaded upfront, so handling filters on the client provides a faster and more responsive user experience without additional server requests.
+
+Routing
+
+/ – Sessions list (server-rendered)
+
+/sessions/[id] – Dynamic session details page
+
+/agenda – Personal agenda page
+
+Dynamic routes are implemented using the App Router and server-side data access.
+
+My Agenda & Persistence
+
+Users can add/remove sessions to their personal agenda.
+
+Agenda state is persisted using localStorage, so it survives page reloads.
+
+When sessions overlap in time, conflicts are visually indicated.
+
+🧪 Tests
+
+The project includes unit and integration tests, covering:
+
+Session overlap detection logic
+
+Sessions list rendering with filtering and search term
+
+Full agenda flow (add → persist → reload)
+
+⏳ Trade-offs & Shortcuts
+
+No backend or database (static JSON only)
+
+No authentication or user accounts
+
+🔮 What I Would Improve With More Time
+
+Suggest alternative sessions from the same track when an agenda conflict occurs
+
+Better conflict resolution UX
+
+Improved accessibility testing
